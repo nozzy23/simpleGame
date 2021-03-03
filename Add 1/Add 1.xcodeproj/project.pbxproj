@@ -13,6 +13,7 @@
 		0587742225EF3482004C0AB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0587742025EF3482004C0AB7 /* Main.storyboard */; };
 		0587742425EF3483004C0AB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0587742325EF3483004C0AB7 /* Assets.xcassets */; };
 		0587742725EF3483004C0AB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0587742525EF3483004C0AB7 /* LaunchScreen.storyboard */; };
+		0587743425EF5175004C0AB7 /* string.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0587743325EF5175004C0AB7 /* string.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		0587742625EF3483004C0AB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0587742825EF3483004C0AB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0587743125EF3B6B004C0AB7 /* HVD_Comic_Serif_Pro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HVD_Comic_Serif_Pro.otf; path = "../../../../../Downloads/HVD-Comic-Serif-Pro/HVD_Comic_Serif_Pro.otf"; sourceTree = "<group>"; };
+		0587743325EF5175004C0AB7 /* string.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = string.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				0587742525EF3483004C0AB7 /* LaunchScreen.storyboard */,
 				0587742825EF3483004C0AB7 /* Info.plist */,
 				0587743125EF3B6B004C0AB7 /* HVD_Comic_Serif_Pro.otf */,
+				0587743325EF5175004C0AB7 /* string.swift */,
 			);
 			path = "Add 1";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			files = (
 				0587741F25EF3482004C0AB7 /* GameViewController.swift in Sources */,
 				0587741B25EF3482004C0AB7 /* AppDelegate.swift in Sources */,
+				0587743425EF5175004C0AB7 /* string.swift in Sources */,
 				0587741D25EF3482004C0AB7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
