@@ -17,6 +17,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var timeLabel:UILabel?
     @IBOutlet weak var numberLabel:UILabel?
     @IBOutlet weak var inputField:UITextField?
+    var timer:Timer?
+    var seconds = 60
     
     var score = 0
     
@@ -26,6 +28,7 @@ class GameViewController: UIViewController {
         
         updateScoreLabel()
         updateNUmberLabel()
+        updateTimeLabel()
     }
     
     func updateScoreLabel() {
@@ -68,6 +71,37 @@ class GameViewController: UIViewController {
         updateNUmberLabel()
         updateScoreLabel()
         inputField?.text = ""
+        
+        if timer == nil {
+            timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+                
+                if self.seconds == 0 {
+                    self.finishGame()
+                } else if self.seconds <= 60{
+                    self.seconds -= 1
+                    self.updateTimeLabel()
+                }
+            }
+        }
+    }
+    
+    func updateTimeLabel() {
+        let min = (seconds / 60) % 60
+        let sec = seconds % 60
+        
+        timeLabel?.text = String(format: "%02d", min) + ":" + String(format:"%02d", sec)
+    }
+    
+    func finishGame(){
+        timer?.invalidate()
+        timer = nil
+        let alert = UIAlertController(title: "Times up!", message: "Nice going! Here is your total score \(score) points. Way to go", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok, let's play again", style: .default, handler: nil))
+        score = 0
+        seconds = 60
+        updateTimeLabel()
+        updateScoreLabel()
+        updateNUmberLabel()
     }
 }
 
